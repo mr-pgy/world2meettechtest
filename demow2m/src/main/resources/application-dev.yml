@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: h2user
+    password: h2pass
+    driver-class-name: org.h2.Driver
+    hikari:
+      maximum-pool-size: 10
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  flyway:
+    enabled: true
+    url: jdbc:h2:mem:testdb
+    user: h2user
+    password: h2pass
+  kafka:
+    bootstrap-servers: localhost:9092
+logging:
+  level:
+    root: INFO

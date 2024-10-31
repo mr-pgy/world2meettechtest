@@ -1,0 +1,10 @@
+services:
+  spaceships-api:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:h2:mem:testdb
+      - SPRING_DATASOURCE_USERNAME=h2user
+      - SPRING_DATASOURCE_PASSWORD=h2pass
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
